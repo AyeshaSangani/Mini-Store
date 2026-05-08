@@ -1,0 +1,134 @@
+
+:root {
+  --primary: #023678;
+  --secondary: #006ca5;
+  --accent: #55E2E9;
+  --highlight: #E1AD01;
+  --light: #f8f9fa;
+}
+
+
+/* Footer */
+.footer {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Titles */
+.footer-title {
+  color: var(--highlight);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-heading {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-heading.highlight {
+  color: var(--highlight);
+}
+
+/* Text */
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  padding-left: 5px;
+}
+
+/* Contact */
+.footer-contact {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+.footer-contact i {
+  color: var(--accent);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: var(--secondary);
+  font-size: 14px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--light);
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+
+/* TOP BAR (new like image) */
+.footer-top {
+  background: var(--secondary);
+  color: var(--light);
+}
+
+.footer-top p {
+  font-size: 14px;
+}
+
+/* Social icons in top bar */
+.footer-top .social-icons a {
+  color: var(--light);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-top .social-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* MAIN FOOTER */
+.footer {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: var(--secondary);
+  font-size: 14px;
+  color: white;
+}

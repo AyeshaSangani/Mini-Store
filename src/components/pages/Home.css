@@ -1,0 +1,118 @@
+
+:root {
+  --primary: #0d3b66;
+  --secondary: #145da0;
+  --accent: #f4b400;
+  --light: #f5f7fa;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(rgba(13,59,102,0.8), rgba(13,59,102,0.8)),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-btn {
+  background: var(--accent);
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 320px;
+  object-fit: cover;
+}
+
+.price {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.btn-cart {
+  background: #ffc107;
+  color: black;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-cart:hover {
+  background: #e0a800;
+}
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  background: var(--primary);
+  padding: 80px 0;
+  margin-bottom: 50px;
+  border-bottom: 4px solid var(--accent);
+}
+
+.testimonial-card {
+  background: var(--light);
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  color: black;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  /* 👇 alignment fix */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 👇 better image fit */
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--accent);
+}
+
+/* text spacing fix */
+.testimonial-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.testimonial-card h6 {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0;
+}

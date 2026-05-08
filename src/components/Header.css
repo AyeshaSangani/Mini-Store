@@ -1,0 +1,214 @@
+:root {
+  --dark-blue: rgb(1, 31, 75);
+  --primary-blue: rgb(3, 57, 108);
+  --secondary-blue: rgb(0, 91, 150);
+  --light-blue: rgb(100, 151, 177);
+  --soft-blue: rgb(179, 205, 224);
+
+  --gold: rgb(217, 139, 25);
+  --gold-light: rgb(231, 159, 49);
+  --yellow: rgb(253, 183, 62);
+  --cream: rgb(254, 212, 139);
+  --soft-cream: rgb(254, 237, 207);
+
+  --white: #ffffff;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+  background: var(--dark-blue);
+  color: var(--soft-cream);
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topbar small {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* topbar icons */
+
+
+.topbar i {
+  color: var(  --soft-blue);
+}
+
+.topbar-right a {
+  color: var(--white);
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.topbar-right a:hover {
+  color: var(--yellow);
+}
+
+
+
+.navbar-custom {
+  background: linear-gradient(
+    90deg,
+    var(--primary-blue),
+    var(--secondary-blue)
+  );
+  padding: 14px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Logo */
+.navbar-brand {
+  color: var(--white) !important;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--yellow) !important;
+}
+
+/* Nav links */
+.navbar-nav {
+  gap: 18px;
+}
+
+.nav-link {
+  color: var(--soft-cream) !important;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--yellow) !important;
+}
+
+/* Underline effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: var(--yellow);
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* =========================
+   NAV ICONS
+========================= */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* SAME COLOR AS TOPBAR ICONS */
+.nav-icons a {
+  color: var(--white);
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: var(--cream);
+  transform: scale(1.15);
+}
+
+/* =========================
+   TOGGLER
+========================= */
+.navbar-toggler {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* =========================
+   STICKY EFFECT
+========================= */
+.sticky-top {
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    background: var(--primary-blue);
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .navbar-nav {
+    gap: 8px;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .nav-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .topbar .container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .topbar small {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .topbar {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .nav-icons a {
+    font-size: 18px;
+  }
+}
