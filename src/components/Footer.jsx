@@ -32,7 +32,7 @@ const Footer = (props) => {
 
       {/* Column 1 */}
       <div className="col-md-3 mb-4">
-        <h5 className="footer-title">👕 ECOMMERCE MINI STORE</h5>
+        <h5 className="footer-title"> {props.title}</h5>
         <p className="footer-text">
           Premium collection of Office Shirts, Casual T-Shirts, and Denim Jeans.
           Elevate your everyday fashion with comfort and style.
