@@ -11,6 +11,8 @@ import {BrowserRouter , Route, Routes} from 'react-router-dom'
 import Shop from './components/pages/Shop'
 import Login from './components/auth/Login'
 import Usestate from './components/pages/Usestate'
+import UseEffect from './components/pages/UseEffect'
+
 
 function App() {
  
@@ -35,6 +37,9 @@ let siteName = "Ecommerce Mini Store"
 <Route path="/login" element={<Login />} />
 
 <Route path='/usestate' element={<Usestate />} ></Route>
+
+<Route path='/useeffect' element={<UseEffect />} ></Route>
+
 
 </Routes>
 

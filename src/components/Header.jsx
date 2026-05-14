@@ -52,6 +52,11 @@ const Header = (props) => {
               <li className="nav-item">
                 <Link className="nav-link" to="usestate">Use State</Link>
               </li>
+               <li className="nav-item">
+                <Link className="nav-link" to="useeffect">Use Effect</Link>
+              </li>
+              
+
             </ul>
 
             {/* Right Icons */}
