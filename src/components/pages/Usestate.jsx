@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 function Usestate() {
 
   const [count, setcount] = useState(0)
+  
   const [text, settext] = useState("nothing")
 
   const changeHandler = (event) => {

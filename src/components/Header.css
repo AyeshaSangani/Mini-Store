@@ -1,108 +1,150 @@
 :root {
-  --dark-blue: rgb(1, 31, 75);
-  --primary-blue: rgb(3, 57, 108);
-  --secondary-blue: rgb(0, 91, 150);
-  --light-blue: rgb(100, 151, 177);
-  --soft-blue: rgb(179, 205, 224);
-
-  --gold: rgb(217, 139, 25);
-  --gold-light: rgb(231, 159, 49);
-  --yellow: rgb(253, 183, 62);
-  --cream: rgb(254, 212, 139);
-  --soft-cream: rgb(254, 237, 207);
+  --primary: #023678;
+  --secondary: #006ca5;
+  --accent: #55E2E9;
+  --highlight: #E1AD01;
+  --light: #f8f9fa;
 
   --white: #ffffff;
+  --dark: #0d1b2a;
+  --text: #dfe7f1;
 }
 
 /* =========================
    TOPBAR
 ========================= */
+
 .topbar {
-  background: var(--dark-blue);
-  color: var(--soft-cream);
-  font-size: 18px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: var(--white);
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.topbar small {
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-left small {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
+  margin: 0;
+  color: var(--light);
+  font-weight: 500;
 }
 
-/* topbar icons */
-
+/* icons */
 
 .topbar i {
-  color: var(  --soft-blue);
-}
-
-.topbar-right a {
-  color: var(--white);
-  font-size: 16px;
+  color: var(--accent);
   transition: 0.3s ease;
 }
 
-.topbar-right a:hover {
-  color: var(--yellow);
+.topbar i:hover {
+  color: var(--highlight);
 }
 
+/* =========================
+   SOCIAL ICONS
+========================= */
 
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar-right a {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.4s ease;
+}
+
+.topbar-right a:hover {
+  background: var(--highlight);
+  color: var(--primary);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar-custom {
-  background: linear-gradient(
-    90deg,
-    var(--primary-blue),
-    var(--secondary-blue)
-  );
-  padding: 14px 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: rgba(2, 54, 120, 0.96);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   z-index: 999;
+  transition: 0.3s ease;
 }
 
+/* =========================
+   LOGO
+========================= */
 
-/* Logo */
 .navbar-brand {
   color: var(--white) !important;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
   transition: 0.3s ease;
 }
 
 .navbar-brand:hover {
-  color: var(--yellow) !important;
+  color: var(--highlight) !important;
 }
 
-/* Nav links */
+/* =========================
+   NAV LINKS
+========================= */
+
 .navbar-nav {
   gap: 18px;
 }
 
 .nav-link {
-  color: var(--soft-cream) !important;
+  color: var(--light) !important;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   transition: 0.3s ease;
+  padding: 8px 5px !important;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--yellow) !important;
+  color: var(--highlight) !important;
 }
 
-/* Underline effect */
+/* underline animation */
+
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -3px;
   width: 0%;
-  height: 3px;
-  background: var(--yellow);
-  transition: 0.3s ease;
+  height: 2px;
+  background: var(--highlight);
+  border-radius: 50px;
+  transition: 0.4s ease;
 }
 
 .nav-link:hover::after,
@@ -113,27 +155,37 @@
 /* =========================
    NAV ICONS
 ========================= */
+
 .nav-icons {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-/* SAME COLOR AS TOPBAR ICONS */
 .nav-icons a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.1);
   color: var(--white);
-  font-size: 22px;
-  transition: 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.4s ease;
 }
 
 .nav-icons a:hover {
-  color: var(--cream);
-  transform: scale(1.15);
+  background: var(--accent);
+  color: var(--primary);
+  transform: scale(1.08);
 }
 
 /* =========================
    TOGGLER
 ========================= */
+
 .navbar-toggler {
   border: 1px solid rgba(255,255,255,0.3);
   padding: 6px 10px;
@@ -148,31 +200,37 @@
 }
 
 /* =========================
-   STICKY EFFECT
+   STICKY NAV
 ========================= */
+
 .sticky-top {
-  backdrop-filter: blur(8px);
+  top: 0;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
+
 @media (max-width: 991px) {
 
   .navbar-collapse {
-    background: var(--primary-blue);
+    background: linear-gradient(
+      180deg,
+      var(--primary),
+      var(--secondary)
+    );
     margin-top: 15px;
     padding: 20px;
-    border-radius: 12px;
-  }
-
-  .navbar-nav {
-    gap: 8px;
+    border-radius: 16px;
     text-align: center;
   }
 
+  .navbar-nav {
+    gap: 10px;
+  }
+
   .nav-link {
-    padding: 10px 0;
+    padding: 12px 0 !important;
   }
 
   .nav-icons {
@@ -185,31 +243,45 @@
 
   .topbar .container {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     text-align: center;
   }
 
-  .topbar small {
+  .topbar-left small {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .navbar-brand {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 @media (max-width: 576px) {
 
   .topbar {
+    font-size: 13px;
+    padding: 10px 5px;
+  }
+
+  .topbar-left small {
     font-size: 12px;
-    padding: 10px;
+    gap: 8px;
+  }
+
+  .topbar-right a {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
   }
 
   .navbar-brand {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .nav-icons a {
-    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
   }
 }
