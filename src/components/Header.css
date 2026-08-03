@@ -1,0 +1,83 @@
+/* Color Theme */
+:root {
+  --primary: #023678;
+  --secondary: #55E2E9;
+  --accent: #006ca5;
+  --highlight: #E1AD01;
+}
+
+/* Topbar */
+.topbar {
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.topbar i {
+  color: var(--secondary);
+}
+
+.topbar-right a {
+  color: #fff;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.topbar-right a:hover {
+  color: var(--highlight);
+  transform: translateY(-2px);
+}
+
+/* Navbar */
+.custom-navbar {
+  background: var(--accent);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--secondary);
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--secondary) !important;
+}
+
+/* Icons */
+.nav-icons a {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-icons a:hover {
+  color: var(--highlight);
+  transform: scale(1.1);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .nav-icons {
+    margin-top: 10px;
+  }
+}
