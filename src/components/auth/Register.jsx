@@ -4,43 +4,55 @@ import "./Register.css"
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Register =  () => {
+const Register = () => {
 
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
 
+ 
   const registerUser = async (e) => {
-   
+
+
     e.preventDefault();
-   
-   const user = {
-     fullname,
-     email,
-     password
-   }
-   
+
+    
+    const user = {
+      fullname,
+      email,
+      password
+    }
+
+    // console.log(user);
+
     try {
-      
-      const response = await axios.post("http://localhost:4000/register", user);
-      alert("registration successful");
+      const response = await axios.post("http://localhost:4000/register", user)
+      alert("registration successfully");
       setFullname("");
       setEmail("");
       setPassword("");
-    
-    } catch (error) {
-      alert("registration failed");
-      console.log(error);
-    }
-}
 
-  
-  
+
+    } catch (error) {
+
+      alert("register failed!")
+      console.log(error);
+      
+
+    }
+
+
+
+  }
+
+
+
+
   return (
     <>
       {/* INTERNAL CSS */}
-     
+
 
       <div className="register-container">
 
@@ -99,7 +111,8 @@ const Register =  () => {
                     type="text"
                     placeholder="Enter full name"
                     value={fullname}
-                    onChange={(e)=>setFullname(e.target.value)} required
+                    onChange={(e) => setFullname(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -114,8 +127,9 @@ const Register =  () => {
                   <input
                     type="email"
                     placeholder="Enter email address"
-                      value={email}
-                    onChange={(e)=>setEmail(e.target.value)} required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -130,15 +144,16 @@ const Register =  () => {
                   <input
                     type="password"
                     placeholder="Create password"
-                      value={password}
-                    onChange={(e)=>setPassword(e.target.value)} required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                   />
                 </div>
               </div>
 
-             
+
               {/* REGISTER BTN */}
-              <button className="register-btn"  type="submit">
+              <button className="register-btn" type="submit">
                 Create Account
               </button>
 

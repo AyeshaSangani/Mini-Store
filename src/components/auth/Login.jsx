@@ -7,49 +7,48 @@ import axios from "axios";
 
 const Login = () => {
 
-   const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  
   const user = JSON.parse(localStorage.getItem("user"))
 
-  if (user) {
-
-    return  <Navigate to="/shop"/>
+  if(user){
+    
+    return <Navigate to="/shop"/>
+  
   }
-   
 
-  const loginUser = async (e) => {
+   const loginUser = async (e) => {
 
-    e.preventDefault();
-
+    e.preventDefault();  
     const user = {
       email,
       password
     }
-
+    // console.log(user);
     try {
-
-      const response = await axios.post("http://localhost:4000/login", user);
+      const response = await axios.post("http://localhost:4000/login", user)
 
       localStorage.setItem(
         "user", JSON.stringify(response.data.user)
       )
+
       alert(response.data.message);
-     
+
       setEmail("");
       setPassword("");
-
+      
       navigate("/shop")
-      window.location.reload();
+      window.location.reload()
 
     } catch (error) {
-      alert(error.response.data.message);
+
+      alert(error.response.data.message)
       console.log(error);
     }
+
   }
-
-
 
   return (
     <>
@@ -109,8 +108,9 @@ const Login = () => {
 
                   <input
                     type="text"
-                    placeholder="Enter username or email" value={email}
-                    onChange={(e) => setEmail(e.target.value)} 
+                    placeholder="Enter username or email"
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -125,8 +125,10 @@ const Login = () => {
 
                   <input
                     type="password"
-                    placeholder="Enter password" value={password}
-                    onChange={(e) => setPassword(e.target.value)} required
+                    placeholder="Enter password"
+                       value={password}
+                    onChange={(e)=>setPassword(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -142,9 +144,13 @@ const Login = () => {
               </button>
 
               {/* REGISTER BUTTON */}
-              <Link type="button"
+              <Link
+                type="button"
                 className="register-btn text-center text-decoration-none"
-                to="/register" >Create Account </Link>
+                to="/register"
+              >
+                Create Account
+              </Link>
             </form>
 
             {/* DIVIDER */}
