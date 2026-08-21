@@ -14,7 +14,7 @@ import UseState from './components/pages/UseState'
 import UseEffects from './components/pages/UseEffects'
 import Contact from './components/pages/contact'
 import Register from './components/auth/Register'
-import Checkout from './components/pages/checkout'
+import Checkout from './components/pages/Checkout'
 
 
 
@@ -22,25 +22,23 @@ import Checkout from './components/pages/checkout'
 function App() {
   
   let siteName = "Ecommerce Mini Store";
-
-  const [count, setCount] = useState(0)
+   const [count, setCount] = useState(0)
 
   return (
     <>
 
     <BrowserRouter>
-        <Header title={siteName} count={count} />
+       <Header title={siteName} count={count} />
       <Routes>
-          <Route path='/' element={<Home count={count}  setCount={setCount} />}/>
-          <Route path='/shop' element={<Shop count={count} setCount={setCount} />}/>
-          <Route path='/cart' element={<Cart  />}/>
+          <Route  path='/' element={<Home count={count} setCount={setCount} />}/>
+          <Route  path='/shop' element={<Shop count={count} setCount={setCount} />} />
+          <Route  path='/cart' element={<Cart/>}/>
           <Route  path='/login' element={<Login/>}/>
           <Route  path='/register' element={<Register/>}/>
           <Route  path='/state' element={<UseState/>}/>
           <Route  path='/effect' element={<UseEffects/>}/>
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/checkout' element={<Checkout />} />
-
+          <Route  path='/contact' element={<Contact/>}/>
+          <Route  path='/checkout' element={<Checkout/>}/>
 
 
 
