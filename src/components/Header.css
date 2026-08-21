@@ -65,7 +65,7 @@
 /* Icons */
 .nav-icons a {
   color: #fff;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   font-size: 18px;
   transition: 0.3s;
 }
